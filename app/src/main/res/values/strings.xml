@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Desafio2</string>
+
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--    Header drawer    -->
+    <string name="nav_header_title">Xavier Canjura</string>
+    <string name="nav_header_subtitle">xavier.canjura@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!--    Items nav    -->
+    <string name="products">Productos</string>
+    <string name="my_shopping">Mis compras</string>
+    <string name="shopping_cart">Carrito</string>
+    <string name="logout">Cerrar Session</string>
+
+
+    <string name="menu_products">Productos</string>
+    <string name="menu_cart">Carrito</string>
+    <string name="menu_shopping">Mis Compras</string>
+
+
 </resources>
