@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1091392045861",
+    "project_id": "loginpp2-cb993",
+    "storage_bucket": "loginpp2-cb993.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091392045861:android:dc8af7bf4345392eefd0cc",
+        "android_client_info": {
+          "package_name": "com.example.desafio2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091392045861-0hs9t7mi50k3u8jojshd0bvlnd9fgbsh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLl49XoxiMudnZtugmvf--e8wxBtVqPKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091392045861-0hs9t7mi50k3u8jojshd0bvlnd9fgbsh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
