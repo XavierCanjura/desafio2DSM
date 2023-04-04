@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvProduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acetaminofen"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivProductImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tituloDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/descripcion"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Hola"
+            app:layout_constraintLeft_toRightOf="@id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tituloDescripcion" />
+
+        <TextView
+            android:id="@+id/tituloContra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/contraIndicaciones"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tvDescripcion" />
+
+        <TextView
+            android:id="@+id/tvContraIndicaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Hola"
+            app:layout_constraintLeft_toRightOf="@id/ivProductImage"
+            app:layout_constraintTop_toBottomOf="@id/tituloContra" />
+
+        <TextView
+            android:id="@+id/tvPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="$3.50"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvContraIndicaciones" />
+
+        <Button
+            android:id="@+id/btAddCart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="3dp"
+            app:cornerRadius="40dp"
+            app:icon="@android:drawable/ic_input_add"
+            app:iconSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
