@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegisterActivity">
+
+
+   <EditText
+       android:id="@+id/txtEmail"
+       android:layout_width="237dp"
+       android:layout_height="49dp"
+       android:layout_marginTop="215dp"
+       android:layout_marginBottom="12dp"
+       android:ems="10"
+       android:hint="Correo Electrónico"
+       android:inputType="textEmailAddress"
+       android:padding="10dp"
+       android:textColor="@color/black"
+       app:layout_constraintBottom_toTopOf="@+id/txtPassword"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <TextView
+       android:id="@+id/tViewCrearCuenta"
+       android:layout_width="168dp"
+       android:layout_height="44dp"
+       android:layout_weight="2.6"
+       android:height="48dp"
+       android:text="Crear Cuenta"
+       android:textColor="@color/black"
+       android:textSize="28sp"
+       android:textStyle="bold"
+       app:layout_constraintBottom_toTopOf="@+id/txtEmail"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.781" />
+
+   <LinearLayout
+       android:id="@+id/linearLayout"
+       android:layout_width="366dp"
+       android:layout_height="56dp"
+       android:layout_marginBottom="150dp"
+       android:orientation="horizontal"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.488"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/btnRegister">
+
+      <TextView
+          android:id="@+id/textView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="¿Ya tienes una cuenta?"
+          android:textColor="@color/black"
+          android:textSize="18sp"
+          tools:layout_editor_absoluteX="82dp"
+          tools:layout_editor_absoluteY="528dp" />
+
+      <TextView
+          android:id="@+id/textViewLogin"
+          android:layout_width="match_parent"
+          android:layout_height="29dp"
+          android:layout_weight="2"
+          android:height="48dp"
+          android:text="Iniciar Sesión"
+          android:textColor="@color/black"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          tools:layout_editor_absoluteX="227dp"
+          tools:layout_editor_absoluteY="528dp" />
+   </LinearLayout>
+
+   <ImageView
+       android:id="@+id/imageView3"
+       android:layout_width="266dp"
+       android:layout_height="218dp"
+       android:layout_marginEnd="88dp"
+       android:contentDescription="TODO"
+       app:layout_constraintBottom_toTopOf="@+id/tViewCrearCuenta"
+       app:layout_constraintEnd_toEndOf="@+id/tViewCrearCuenta"
+       app:srcCompat="@drawable/fondo"
+       tools:ignore="MissingConstraints" />
+
+   <ImageView
+       android:id="@+id/imageView4"
+       android:layout_width="242dp"
+       android:layout_height="218dp"
+       android:layout_marginStart="216dp"
+       android:layout_marginTop="4dp"
+       app:layout_constraintStart_toStartOf="@+id/linearLayout"
+       app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+       app:srcCompat="@drawable/fondo"
+       tools:ignore="MissingConstraints" />
+
+   <EditText
+       android:id="@+id/txtPassword"
+       android:layout_width="237dp"
+       android:layout_height="49dp"
+       android:layout_marginTop="52dp"
+       android:layout_marginBottom="38dp"
+       android:ems="10"
+       android:hint="Contraseña"
+       android:inputType="textPassword"
+       android:padding="10dp"
+       android:textColor="@color/black"
+       app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+       app:layout_constraintStart_toStartOf="@+id/txtEmail"
+       app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+   <Button
+       android:id="@+id/btnRegister"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:layout_marginBottom="15dp"
+       android:text="Registrarme"
+       android:textColor="@color/white"
+       app:backgroundTint="#EDFF7700"
+       app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.503"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
