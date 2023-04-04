@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/nav_item_one"
+            android:icon="@drawable/baseline_medical_services_24"
+            android:title="Productos"/>
 
-    <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_products"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/products" />
+            android:id="@+id/nav_item_two"
+            android:icon="@drawable/baseline_shopping_cart_24"
+            android:title="Carrito"/>
+
         <item
-            android:id="@+id/nav_shopping"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/my_shopping" />
+            android:id="@+id/nav_item_three"
+            android:icon="@drawable/baseline_history_24"
+            android:title="Historial"/>
         <item
-            android:id="@+id/nav_cart"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/shopping_cart" />
-        <item
-            android:id="@+id/nav_cerrarsesion"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/logout" />
+            android:id="@+id/nav_item_four"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="Logout"/>
     </group>
 </menu>

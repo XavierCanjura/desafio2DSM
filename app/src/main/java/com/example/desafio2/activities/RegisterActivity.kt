@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import android.content.Intent
+import com.example.desafio2.views.MainActivity
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -77,7 +78,7 @@ class RegisterActivity : AppCompatActivity() {
 
     //validacion para saber si la sesion esta disponible
     private fun checkuser(){
-        var authStateListener = FirebaseAuth.AuthStateListener { auth ->
+        authStateListener = FirebaseAuth.AuthStateListener { auth ->
             if (auth.currentUser != null) {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)

@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import android.content.Intent
+import com.example.desafio2.views.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 
