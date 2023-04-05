@@ -1,10 +1,13 @@
 package com.example.desafio2.views
 
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,6 +27,7 @@ class ProductsFragment : Fragment() {
     private var productAdapter: ProductAdapter? = null
     var products: MutableList<ProductModel> = ArrayList()
 
+    private lateinit var user: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,25 +51,29 @@ class ProductsFragment : Fragment() {
         return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-    }
-
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 
     private fun initRecyclerView(){
-        productAdapter = ProductAdapter(products)
+        productAdapter = ProductAdapter(products) { product ->
+            onItemSelected(
+                product
+            )
+        }
         binding.rvProductsList.layoutManager = LinearLayoutManager(context)
         binding.rvProductsList.adapter = productAdapter
     }
 
-    companion object {
-        var database: FirebaseDatabase = FirebaseDatabase.getInstance()
-        var refProducts: DatabaseReference = database.getReference("products")
+
+    private fun onItemSelected(product: ProductModel) {
+        viewModel.addCart(product.nombre, user, product.imagen, product.precio )
+        Toast.makeText(context, "Se agrego el medicamento al carrito", Toast.LENGTH_SHORT).show()
+
+    }
+
+    fun newInstance(user: String) {
+        this.user = user
     }
 }

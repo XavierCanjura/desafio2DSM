@@ -1,5 +1,6 @@
 package com.example.desafio2.activities
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.desafio2.R
@@ -45,6 +46,11 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
             if(task.isSuccessful)
             {
+                val credentials = getSharedPreferences("credentials", Context.MODE_PRIVATE)
+                var editor = credentials.edit()
+                editor.putString("correo", email)
+                editor.commit()
+
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()

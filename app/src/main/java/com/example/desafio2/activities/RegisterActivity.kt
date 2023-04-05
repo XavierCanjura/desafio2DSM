@@ -1,5 +1,6 @@
 package com.example.desafio2.activities
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.desafio2.R
@@ -9,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import android.content.Intent
+import android.util.Log
 import com.example.desafio2.views.MainActivity
 
 class RegisterActivity : AppCompatActivity() {
@@ -51,6 +53,11 @@ class RegisterActivity : AppCompatActivity() {
                 task ->
             if (task.isSuccessful)
             {
+                val credentials = getSharedPreferences("credentials", Context.MODE_PRIVATE)
+                var editor = credentials.edit()
+                editor.putString("correo", email)
+                editor.commit()
+
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -80,6 +87,11 @@ class RegisterActivity : AppCompatActivity() {
     private fun checkuser(){
         authStateListener = FirebaseAuth.AuthStateListener { auth ->
             if (auth.currentUser != null) {
+                val credentials = getSharedPreferences("credentials", Context.MODE_PRIVATE)
+                var editor = credentials.edit()
+                editor.putString("correo", auth.currentUser!!.email)
+                editor.commit()
+
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()

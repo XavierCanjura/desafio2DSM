@@ -3,21 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.CartFragment">
+    tools:context=".views.HistoryFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCartList"
+        android:id="@+id/rvHistoryList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/item_cart"/>
-
-    <Button
-        android:id="@+id/btnComprar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom"
-        android:insetBottom="0dp"
-        android:text="@string/comprar"
-        android:textColor="@color/white"/>
 
 </FrameLayout>
