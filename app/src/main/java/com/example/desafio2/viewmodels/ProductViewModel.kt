@@ -1,14 +1,18 @@
 package com.example.desafio2.viewmodels
 
+import android.os.Build
 import android.util.Log
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.desafio2.api.Conexion
+import com.example.desafio2.models.CartModel
 import com.example.desafio2.models.ProductModel
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
+import java.util.*
 
 class ProductViewModel: ViewModel() {
     private var productLiveData = MutableLiveData<List<ProductModel>>()
@@ -34,6 +38,18 @@ class ProductViewModel: ViewModel() {
                 Log.d("ERROR", error.message.toString())
             }
         })
+    }
+
+
+    fun addCart(producto: String?, cliente: String?, imagen: String?, precio: String?) {
+        val instant = Date()
+        val cart = CartModel(instant.toString(), producto, cliente, imagen, precio, "carrito")
+
+        Conexion.addCart("compras", instant, cart).addOnSuccessListener {
+            true
+        }.addOnFailureListener {
+            false
+        }
     }
 
     fun observerProductLiveData(): LiveData<List<ProductModel>> {

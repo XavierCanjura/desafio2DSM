@@ -37,9 +37,9 @@ class ProductActivity : AppCompatActivity() {
     }
 
     private fun initRecyclerView(){
-        productAdapter = ProductAdapter(products)
-        binding.rvProductsList2.layoutManager = LinearLayoutManager(this)
-        binding.rvProductsList2.adapter = productAdapter
+//        productAdapter = ProductAdapter(products)
+//        binding.rvProductsList2.layoutManager = LinearLayoutManager(this)
+//        binding.rvProductsList2.adapter = productAdapter
     }
 
 //    private fun init(){
